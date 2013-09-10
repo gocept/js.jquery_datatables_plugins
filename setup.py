@@ -16,7 +16,8 @@ def read(*rnames):
 long_description = (
     read('README.txt')
     + '\n' +
-    read('js', 'jquery_datatables_plugins', 'test_jquery_datatables.txt')
+    read('js', 'jquery_datatables_plugins',
+         'test_jquery_datatables_plugins.txt')
     + '\n' +
     read('CHANGES.txt'))
 
