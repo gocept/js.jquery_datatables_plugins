@@ -10,16 +10,20 @@ import os
 
 version = '1.9.4-1.dev0'
 
+
 def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+    """Read file content."""
+    with open(os.path.join(os.path.dirname(__file__), *rnames))as f:
+        return f.read()
+
 
 long_description = (
-    read('README.txt')
+    read('README.rst')
     + '\n' +
     read('js', 'jquery_datatables_plugins',
-         'test_jquery_datatables_plugins.txt')
+         'test_jquery_datatables_plugins.rst')
     + '\n' +
-    read('CHANGES.txt'))
+    read('CHANGES.rst'))
 
 setup(
     name='js.jquery_datatables_plugins',
@@ -31,7 +35,8 @@ setup(
     author='Danie. Havlik',
     author_email='dh@gocept.com',
     license='BSD',
-    packages=find_packages(),namespace_packages=['js'],
+    packages=find_packages(),
+    namespace_packages=['js'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
@@ -39,10 +44,10 @@ setup(
         'setuptools',
         'js.jquery',
         'js.jquery_datatables'
-        ],
+    ],
     entry_points={
         'fanstatic.libraries': [
             'jquery_datatables_plugins = js.jquery_datatables_plugins:library',
-            ],
-        },
-    )
+        ],
+    },
+)

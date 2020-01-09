@@ -1,0 +1,17 @@
+language: python
+dist: xenial
+python:
+  - 2.7
+  - 3.8
+install: pip install tox-travis coveralls
+script: tox
+after_success:
+  - coverage combine
+  - coveralls
+cache:
+  pip: true
+  directories:
+  - eggs/
+notifications:
+  webhooks:
+    secure: RitAJa3um97pEvDgpavZtqALpo1889LLDlZ0lWLGv7sUQ8mPVhPChoF5YOc7HohVxmoLa+wW9xAKS+04RNqBnc3BbnTHw7i1GG34EcBjm9uJl/E8NjHLUDN5bronS7jK37kggvX7TbCVferfXu+C2+ikmx/WX9Sq3sho7KRo2zQquSbfkK8EtIt2FVTlh31pcchqvWfL7PYk4BjzsdWlHRJQYAhNxpoDLvw5a7Se1gx9AbyrgdZ7JoEEIUv4+9EeJr3zB9WQyTBNiYF6/clq+k/Y2kaSmZeTZJlNI0/R/Y2Gz5BFiIU6nbMQQZ7P6Y4GSouzcEewAfvtX1SUEnyRdmebFIBBVUoAKZ6xaK5+pcsVELHYDMqGa+YCVf3lKyXbWUWauAeF6hsXmLsFv1qpyFuC+AKIxF7DEss7mUvZ0kuz2wvPWiUHhQAPvvIJv+LeoaMP09Do4fUdPtBjW3oWwDbXoNWnzfP2JLIK4AIZ1Tv2A687fooSMbi+c+bBXL1ZaawIUPSnuR2TqUrIs4fkyDkv/ZAw6Xf4DBVjLFwiu/y8TbooeGvpf5WZ9/3MRyjqsd9sdJskZWm3rqbzYBUUEltpXeMmf+YcjcIYdS2rlQk5IOTk/5N4Us3TOMpddW2xRiCdYLfoy8wCVXXTmxiTfGbydgtM+lT51InZcTAhhnw=
