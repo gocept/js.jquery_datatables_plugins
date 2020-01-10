@@ -1,0 +1,14 @@
+[run]
+branch = True
+source = js.smoke
+
+[report]
+precision = 2
+
+[html]
+directory = coverage-report
+
+[paths]
+source =
+   js/smoke
+   .tox/*/lib/python*/site-packages/js/smoke
