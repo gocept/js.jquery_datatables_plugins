@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = js.smoke
+source = js.jquery_datatables_plugins
 
 [report]
 precision = 2
@@ -10,5 +10,5 @@ directory = coverage-report
 
 [paths]
 source =
-   js/smoke
-   .tox/*/lib/python*/site-packages/js/smoke
+   js/jquery_datatables_plugins
+   .tox/*/lib/python*/site-packages/js/jquery_datatables_plugins
