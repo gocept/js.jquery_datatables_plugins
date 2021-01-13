@@ -1,9 +1,11 @@
 CHANGES
 *******
 
-0.1 (unreleased)
-================
+1.9.4-1 (unreleased)
+====================
 
 - Initial Release
 
-- Migrate to Github.
+- Migrate to GitHub.
+
+- Use GitHub actions as CI.
