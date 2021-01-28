@@ -7,4 +7,3 @@ these resources to be included on a page::
 
   >>> import js.jquery_datatables_plugins as p
   >>> p.column_filter.need()
-
